@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Newtype';
+    src: url('Newtype.eot');
+    src: url('Newtype.eot?#iefix') format('embedded-opentype'),
+        url('Newtype.woff2') format('woff2'),
+        url('Newtype.woff') format('woff'),
+        url('Newtype.ttf') format('truetype'),
+        url('Newtype.svg#Newtype') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
