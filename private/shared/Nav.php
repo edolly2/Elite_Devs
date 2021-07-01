@@ -1,6 +1,5 @@
 <div class="navigation-cont">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">EliteDevs</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,7 +10,7 @@
       <ul class="nav navbar-nav mr-auto nav-pills">
         <li class="nav-item home-item">
           <!-- <a class="nav-link active" href="#!">Home</a> -->
-          <a class="nav-link nav-tabs" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link nav-tabs home-tab" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
 
         
@@ -33,11 +32,11 @@
         </li>
 
         <li class="nav-item contact-item">
-          <a class="nav-link nav-tabs" href="#">Contact</a>
+          <a class="nav-link nav-tabs contact-tab" href="#">Contact</a>
         </li>
 
-        <li class="nav-item nav-tabs">
-          <a class="nav-link" href="#">Go Pro</a>
+        <li class="nav-item nav-tabs go-pro-item">
+          <a class="nav-link go-pro-tab" href="#">Go Pro</a>
         </li>
 
         
@@ -71,9 +70,11 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
       </form>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link login-link" href="#">Log-in</a>
+      <a class="nav-link login-link" href="#">
+        <li class="nav-item login-item">
+          Log-in
         </li>
+        </a>
     </div>
   </nav>
 </div>

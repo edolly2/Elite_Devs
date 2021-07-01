@@ -37,17 +37,52 @@ $(document).ready(() => {
   });
 });
 
-// const navItem = $(".nav-item")
-// $(document).ready(() => {
-//     $(allNavTabs).on("click", (event) => {
-//         if($(event.target).hasClass("paths-tab")) {
-//             $(event.target).addClass("is-active");
-//         }
-//         else {
-//             $(".paths-tab").removeClass("is-active");
-//         }
-//     })
-// });
+const navLink = $(".nav-link");
+$(document).ready(() => {
+  $(navLink).on("click", (event) => {
+    if ($(event.target).hasClass("paths-tab")) {
+      $(event.target).addClass("active");
+    } else {
+      $(".paths-tab").removeClass("active");
+    }
+
+    if ($(event.target).hasClass("courses-tab")) {
+      $(event.target).addClass("active");
+    } else {
+      $(".courses-tab").removeClass("active");
+    }
+
+    if ($(event.target).hasClass("contact-tab")) {
+      $(event.target).addClass("active");
+    } else {
+      $(".contact-tab").removeClass("active");
+    }
+
+    if ($(event.target).hasClass("resources-tab")) {
+      $(event.target).addClass("active");
+    } else {
+      $(".resources-tab").removeClass("active");
+    }
+
+    if ($(event.target).hasClass("go-pro-tab")) {
+      $(event.target).addClass("active");
+    } else {
+      $(".go-pro-tab").removeClass("active");
+    }
+
+    if ($(event.target).hasClass("community-tab")) {
+      $(event.target).addClass("active");
+    } else {
+      $(".community-tab").removeClass("active");
+    }
+
+    if ($(event.target).hasClass("home-tab")) {
+      $(event.target).addClass("active");
+    } else {
+      $(".home-tab").removeClass("active");
+    }
+  });
+});
 
 //   $(pathsTab).on("click", () => {
 //     $(pathsDropMenu).toggle(500);
@@ -70,11 +105,12 @@ const formExitBtn = $(".form-exit");
 const loginWindow = $(".login-cont");
 const loginNavLink = $(".login-link");
 $(document).ready(() => {
-    $(loginNavLink).on("click", () => {
-        $(loginWindow).show(500);
-    })
+  $(loginNavLink).on("click", () => {
+    $(loginWindow).show(500);
+    $(allDropMenus).hide(500);
+  });
 
-    $(formExitBtn).on("click", () => {
-        $(loginWindow).hide(500);
-    })
+  $(formExitBtn).on("click", () => {
+    $(loginWindow).hide(500);
+  });
 });
