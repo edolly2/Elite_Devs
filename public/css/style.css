@@ -9,6 +9,7 @@ html {
   width: 100%;
   height: 100%;
   font-size: 62.5%;
+  /* position: relative; */
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   font-family: "Montserrat";
 }
 
@@ -68,10 +70,10 @@ header {
   top: 0;
 }
 
-#page {
+/* #page {
   height: 100%;
   width: 100%;
-}
+} */
 
 .header-title-cont {
   /* display: none; */
@@ -112,7 +114,7 @@ header {
 }
 
 .go-pro-item {
-  border-bottom: none; 
+  border-bottom: none;
 }
 
 .search-bar {
@@ -163,7 +165,7 @@ header {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -30%);
-  background-color: #3f3f3f;
+  background-color: #666666;
   border-radius: 1.2rem;
   box-shadow: inset 0 0 2.5rem black, 7px 7px 20px black;
   display: none;
@@ -257,13 +259,13 @@ hr {
 footer {
   display: flex;
   justify-content: space-evenly;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative;
+  /* bottom: 0; */
+  /* left: 0; */
   width: 100%;
   padding-top: 2rem;
-  background-color: rgb(63, 63, 63);
-  color:white;
+  background-color: #666666;
+  color: white;
 }
 
 .footer-logo-cont {
@@ -277,11 +279,9 @@ footer {
   align-items: center;
 }
 
-
 .footer-logo {
   width: 3rem;
   height: auto;
-  
 }
 
 .foot-columns {
@@ -314,22 +314,74 @@ footer {
 }
 
 .dropdown-menu {
-  background-color:#3f3f3f;
+  background-color: #666666;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #3f3f3f;
+  background-color: #666666;
 }
 
 .main-title-cont {
   text-align: center;
 }
 
-main {
-  position: relative;
-  min-height: 100%;
-  max-height: 100%;
+.main-title-cont h1 {
+  font-size: 6rem;
+}
 
+main {
+  /* position: relative; */
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.home-main-cont {
+  width: 90%;
+}
+
+.card-title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+
+.card-list {
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
+.card-list-item {
+  list-style-type: disc;
+  padding: 0.5rem 0;
+  margin-left: 2rem;
+}
+
+.home-main-signup-btn-cont {
+  text-align: center;
+}
+
+.home-main-signup-btn {
+  width: 25%;
+}
+
+.wd-img {
+  min-height: 100%;
+  width: auto;
+}
+
+.card-body {
+  padding: 0 0 2rem 0;
+}
+
+.btn {
+  font-size: 1.6rem;
+}
+
+.signup-page-cont {
+  width: 100%;
+  height: 100vh;
 }

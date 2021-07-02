@@ -9,8 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav mr-auto nav-pills">
         <li class="nav-item home-item">
-          <!-- <a class="nav-link active" href="#!">Home</a> -->
-          <a class="nav-link nav-tabs home-tab" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link nav-tabs home-tab" href="<?php echo url_for("./index.php"); ?>">Home <span class="sr-only">(current)</span></a>
         </li>
 
         
@@ -32,11 +31,11 @@
         </li>
 
         <li class="nav-item contact-item">
-          <a class="nav-link nav-tabs contact-tab" href="#">Contact</a>
+          <a class="nav-link nav-tabs contact-tab" href="<?php echo url_for("/contact/index.php"); ?>">Contact</a>
         </li>
 
         <li class="nav-item nav-tabs go-pro-item">
-          <a class="nav-link go-pro-tab" href="#">Go Pro</a>
+          <a class="nav-link go-pro-tab" href="<?php echo url_for("/go-pro/index.php"); ?>">Go Pro</a>
         </li>
 
         

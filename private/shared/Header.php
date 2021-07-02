@@ -1,5 +1,5 @@
 <body>
-    <div id="page">
+    <div class="header-page-cont">
         <header>
            
             <div class="logo-cont">
@@ -12,4 +12,7 @@
 
             <?php include 'Nav.php'; ?>
         </header>
+    </div>
+    <div class="main-title-cont">
+      <h1>EliteDevs</h1>
     </div>
