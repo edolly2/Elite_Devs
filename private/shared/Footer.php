@@ -27,17 +27,7 @@
                     <li>IOS</li>
                 </ul>
             </div>
-            <div class="foot-columns foot-column4-cont">
-                <h4>Social Media</h4>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>Youtube</li>
-                    <li>Github</li>
-                    <li>Linkedin</li>
-                </ul>
-            </div>
+            
             <div class="foot-columns foot-column5-cont">
                 <h4>Help</h4>
                 <ul>
