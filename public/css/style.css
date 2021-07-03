@@ -1,16 +1,30 @@
+/* ================================= 
+===========TABLE OF CONTENTS========
+==================================*/
+
+/* ================================= 
+===========IMPORTS==================
+==================================*/
+
 @import url("https://fonts.googleapis.com/css?family=Euphoria+Script&display=swap");
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
+/* ================================= 
+===========VARIABLES================
+==================================*/
+
 :root {
 }
 
+/* ================================= 
+===========BASE STYLEs==============
+==================================*/
+
 html {
   width: 100%;
-  /* height: 100%; */
   font-size: 62.5%;
   box-sizing: border-box;
-  /* position: relative; */
 }
 
 body {
@@ -37,6 +51,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 ul {
@@ -60,6 +75,10 @@ p {
   line-height: 1.5;
 }
 
+/* ================================= 
+===========GLOBAL STYLES============
+==================================*/
+
 header {
   display: flex;
   justify-content: space-between;
@@ -71,29 +90,61 @@ header {
   top: 0;
 }
 
-/* #page {
+main {
   height: 100%;
-  width: 100%;
-} */
+  display: flex;
+  justify-content: center;
+}
 
-.header-title-cont {
-  /* display: none; */
+footer {
+  display: flex;
+  justify-content: space-evenly;
   position: relative;
+  width: 100%;
+  padding-top: 2rem;
+  background-color: #666666;
+  color: white;
 }
 
-.header-title {
+legend {
+  white-space: nowrap;
+}
+
+hr {
+  margin: 0 0 2rem 15%;
+  width: 70%;
+  border: 2px solid black;
+  opacity: 1;
+  border-radius: 0.2rem;
   color: black;
-  position: absolute;
-  top: 2rem;
 }
 
-.gold {
-  color: rgb(158, 142, 22);
+.btn {
+  font-size: calc(1.6rem + 1.2vw);
 }
 
-.white {
-  color: rgb(158, 142, 22);
+.page-heading-cont {
+  width: 100%;
+  text-align: center;
+  font-size: calc(3.6rem + 1.7vw);
+  padding: 2rem 0;
 }
+
+.lists {
+  margin-left: 8rem;
+  padding: 4rem 0;
+}
+
+.list-items {
+  list-style-type: disc;
+  font-size: clamp(1.6rem, 1.65vw, 2.4rem);
+}
+
+/* ================================= 
+===========HEADER===================
+==================================*/
+
+/* ---LOGO--- */
 
 .logo-cont {
   text-align: center;
@@ -105,6 +156,10 @@ header {
   height: auto;
 }
 
+/* ================================= 
+===========NAVIGATION===============
+==================================*/
+
 .navigation-cont {
   padding: 2rem 2rem 0 2rem;
 }
@@ -114,19 +169,35 @@ header {
   border-top-right-radius: 0.8rem;
 }
 
-.go-pro-item {
-  border-bottom: none;
+.nav-item {
+  font-size: 1.6rem;
+  padding: 0 1rem;
 }
 
-.search-bar {
-  display: flex;
+.login-item {
+  padding: 0 2rem;
+  color: green;
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+/* ---TABS--- */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #666666;
+}
+
+.go-pro-item {
+  border-bottom: none;
 }
 
 .nav-link {
   border-radius: 0.6rem;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   background-color: rgb(146, 146, 146);
 }
 
@@ -138,26 +209,171 @@ header {
   color: green;
 }
 
-.navbar-brand {
-  font-family: "Newtype";
-  font-size: 3.6rem;
-  /* font-weight: 900; */
-  /* letter-spacing: 3px; */
-  /* text-shadow:  5px 5px 10px black; */
-  color: black;
+.search-bar {
+  display: flex;
+  padding-right: 2rem;
+}
+
+/* ---SUB TABS--- */
+
+.dropdown-menu {
+  background-color: #666666;
+  overflow: hidden;
 }
 
 .sub-lists {
   display: none;
 }
 
-/* .dropdown-item {
-  max-width: 100%;
-} */
+/* ================================= 
+===========HOME=====================
+==================================*/
 
-.dropdown-menu {
-  overflow: hidden;
+/* ---MAIN--- */
+.home-main-cont {
+  display: flex;
+  width: 90%;
+  padding: 2rem 0 4rem 0;
 }
+
+.main-title-cont {
+  text-align: center;
+}
+
+.main-title-cont h1 {
+  /* font-size: 6rem; */
+}
+
+/* ================================= 
+===========HOME MAIN INFO CARD======
+==================================*/
+
+.card-title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+
+.card-list {
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
+.card-list-item {
+  list-style-type: disc;
+  padding: 0.5rem 0;
+  margin-left: 2rem;
+}
+
+.home-main-signup-btn-cont {
+  text-align: center;
+}
+
+.home-main-signup-btn {
+  width: 25%;
+}
+
+.wd-img {
+  min-height: 100%;
+  width: auto;
+}
+
+.card-body {
+  padding: 0 0 2rem 0;
+}
+
+/* ---HOME RESOURCES--- */
+.home-resources-page-cont {
+  width: 100vw;
+  height: 100vh;
+  background-color: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  border-top: 1rem solid rgb(158, 142, 22);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+}
+
+.home-resources-cont {
+  width: 80%;
+  height: 80%;
+  /* background-color: #fff; */
+  /* border: 2px solid black; */
+  /* box-shadow: 0 0 10px black; */
+  border-radius: 0.6rem;
+  background: rgba(102, 102, 102, 0.6);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6), 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ---HOME COMMUNITY--- */
+.home-community-page-cont {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  border-top: 1rem solid rgb(255, 255, 255);
+}
+
+.home-community-cont {
+  width: 80%;
+  height: 80%;
+  /* background-color: #fff; */
+  /* border: 2px solid black; */
+  /* box-shadow: 0 0 10px black; */
+  border-radius: 0.6rem;
+  background: rgba(102, 102, 102, 0.6);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6), 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+/* ================================= 
+===========FOOTER===================
+==================================*/
+
+.footer-logo-cont {
+  position: absolute;
+  left: 2rem;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 3rem;
+  height: auto;
+}
+
+.foot-columns {
+  text-align: center;
+}
+
+.foot-column1-cont {
+  padding-left: 6rem;
+}
+
+.foot-columns h4 {
+  font-weight: 900;
+  border-bottom: 2px solid black;
+}
+
+/* ================================= 
+===========LOGIN FORM/WINDOW========
+==================================*/
 
 .login-cont {
   width: 50%;
@@ -179,15 +395,6 @@ header {
   font-size: 3.6rem;
 }
 
-hr {
-  margin: 0 0 2rem 15%;
-  width: 70%;
-  border: 2px solid black;
-  opacity: 1;
-  border-radius: 0.2rem;
-  color: black;
-}
-
 .form-logo {
   width: 8rem;
   height: auto;
@@ -198,7 +405,6 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: green; */
 }
 
 .form-group {
@@ -236,14 +442,18 @@ hr {
 }
 
 .form-email-pass-cont {
-  /* background-color: pink; */
   width: 50%;
 }
 
 .submit {
-  /* margin-left: 2rem; */
   width: 100%;
   border-radius: 0.6rem;
+}
+
+.form-exit-cont {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
 }
 
 .form-exit {
@@ -253,137 +463,9 @@ hr {
   color: black;
 }
 
-.form-exit-cont {
-  position: absolute;
-  top: 2rem;
-  right: 4rem;
-}
-
-footer {
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  /* bottom: 0; */
-  /* left: 0; */
-  width: 100%;
-  padding-top: 2rem;
-  background-color: #666666;
-  color: white;
-}
-
-.footer-logo-cont {
-  position: absolute;
-  left: 2rem;
-  bottom: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-logo {
-  width: 3rem;
-  height: auto;
-}
-
-.foot-columns {
-  text-align: center;
-}
-
-.foot-column1-cont {
-  padding-left: 6rem;
-}
-
-.foot-columns h4 {
-  font-weight: 900;
-  border-bottom: 2px solid black;
-}
-
-.login-item {
-  padding: 0 2rem;
-  color: green;
-  font-weight: 900;
-  font-size: 1.6rem;
-}
-
-.search-bar {
-  padding-right: 2rem;
-}
-
-.nav-item {
-  font-size: 1.6rem;
-  padding: 0 1rem;
-}
-
-.dropdown-menu {
-  background-color: #666666;
-}
-
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #666666;
-}
-
-.main-title-cont {
-  text-align: center;
-}
-
-.main-title-cont h1 {
-  /* font-size: 6rem; */
-}
-
-main {
-  /* position: relative; */
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.home-main-cont {
-  display: flex;
-  width: 90%;
-  padding: 2rem 0 4rem 0;
-}
-
-.card-title {
-  text-align: center;
-  font-weight: 900;
-  font-size: 2.4rem;
-}
-
-.card-list {
-  padding: 2rem;
-  font-size: 1.6rem;
-}
-
-.card-list-item {
-  list-style-type: disc;
-  padding: 0.5rem 0;
-  margin-left: 2rem;
-}
-
-.home-main-signup-btn-cont {
-  text-align: center;
-}
-
-.home-main-signup-btn {
-  width: 25%;
-}
-
-.wd-img {
-  min-height: 100%;
-  width: auto;
-}
-
-.card-body {
-  padding: 0 0 2rem 0;
-}
-
-.btn {
-  font-size: 1.6rem;
-}
+/* ================================= 
+===========SIGN UP FORM/WINDOW======
+==================================*/
 
 .signup-page-cont,
 .helper-page-cont {
@@ -424,10 +506,6 @@ main {
   font-size: 1.6rem;
 }
 
-legend {
-  white-space: nowrap;
-}
-
 .signup-hr {
   margin: 0 12.5% 1rem 0;
   width: 100%;
@@ -436,7 +514,6 @@ legend {
 .card-numbers-cont {
   display: flex;
   padding-left: 10%;
-  /* justify-content: space-evenly; */
 }
 
 .signup-submit-btns-cont {
@@ -449,19 +526,9 @@ legend {
   width: 25%;
 }
 
-.page-heading-cont {
-  /* padding: 2rem; */
-  width: 100%;
-  text-align: center;
-  font-size: 3.6rem;
-  padding: 2rem 0;
-}
-
-@media screen and (max-width: 768px) {
-  * {
-    max-width: 100%;
-  }
-}
+/* ================================= 
+===========HELPER PAGE/WINDOW======
+==================================*/
 
 .helper-links-cont {
   width: 75%;
@@ -484,4 +551,15 @@ legend {
 .helper-links-cont ul li {
   list-style-type: disc;
   margin-left: 2rem;
+}
+
+
+/* ================================= 
+===========MEDIA Q'S================
+==================================*/
+
+@media screen and (max-width: 768px) {
+  * {
+    max-width: 100%;
+  }
 }

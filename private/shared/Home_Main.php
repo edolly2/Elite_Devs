@@ -16,7 +16,7 @@
               <li class="card-list-item">Become a top web developer among your peers.</li>
             </ul>
             <div class="home-main-signup-btn-cont">
-              <a href="<?php echo url_for("/go-pro/index.php"); ?>"><button type="button" class="btn btn-secondary home-main-signup-btn">Sign Up</button></a>
+              <a href="<?php echo url_for("/go-pro/index.php"); ?>"><button type="button" class="btn btn-primary home-main-signup-btn">Sign Up</button></a>
             </div>
             
           </div>

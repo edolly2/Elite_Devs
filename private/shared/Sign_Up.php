@@ -119,7 +119,7 @@ if (is_post_request()) {
 
       <div class="signup-submit-btns-cont">
         <input type="submit" class="btn btn-primary submit submit-btns" value="Sign Up" name="submit">
-        <input type="button" id="cancel" class="btn btn-primary submit submit-btns" value="Cancel" name="cancel">
+        <input type="button" id="cancel" class="btn btn-secondary submit submit-btns" value="Cancel" name="cancel">
       </div>
     </form>
 

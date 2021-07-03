@@ -18,6 +18,7 @@
           <div class="dropdown-menu resources-dropdown">
             <a class="dropdown-item" href="<?php echo url_for('/resources/cheatsheets/index.php'); ?>">Cheatsheets</a>
             <a class="dropdown-item" href="<?php echo url_for('/resources/helper_links/index.php'); ?>">Helper Links</a>
+            <a class="dropdown-item" href="<?php echo url_for('/resources/youtube/index.php'); ?>">Key Youtube Channels</a>
             <a class="dropdown-item" href="<?php echo url_for('/resources/videos/index.php'); ?>">Videos</a>
           </div>
         </li>
