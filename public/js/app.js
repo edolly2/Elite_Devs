@@ -114,3 +114,10 @@ $(document).ready(() => {
     $(loginWindow).hide(500);
   });
 });
+
+const formCancelBtn = $("#cancel");
+$(document).ready(() => {
+  $(formCancelBtn).on("click", () => {
+    window.location.replace("../index.php");
+  })
+});

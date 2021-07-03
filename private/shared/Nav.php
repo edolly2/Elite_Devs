@@ -9,15 +9,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav mr-auto nav-pills">
         <li class="nav-item home-item">
-          <a class="nav-link nav-tabs home-tab" href="<?php echo url_for("./index.php"); ?>">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link nav-tabs home-tab" href="<?php echo url_for('./index.php'); ?>">Home <span class="sr-only">(current)</span></a>
         </li>
 
         
         <li class="nav-item dropdown resources-item">
           <a class="nav-link dropdown-toggle resources-tab nav-tabs" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
           <div class="dropdown-menu resources-dropdown">
-            <a class="dropdown-item" href="#!">Cheatsheets</a>
-            <a class="dropdown-item" href="#!">Videos</a>
+            <a class="dropdown-item" href="<?php echo url_for('/resources/cheatsheets/index.php'); ?>">Cheatsheets</a>
+            <a class="dropdown-item" href="<?php echo url_for('/resources/helper_links/index.php'); ?>">Helper Links</a>
+            <a class="dropdown-item" href="<?php echo url_for('/resources/videos/index.php'); ?>">Videos</a>
           </div>
         </li>
 
@@ -25,29 +26,29 @@
         <li class="nav-item dropdown community-item">
           <a class="nav-link dropdown-toggle community-tab nav-tabs" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Community</a>
           <div class="dropdown-menu community-dropdown">
-            <a class="dropdown-item" href="#!">Chat</a>
-            <a class="dropdown-item" href="#!">Forum</a>
+            <a class="dropdown-item" href="<?php echo url_for('/community/chat/index.php'); ?>">Chat</a>
+            <a class="dropdown-item" href="<?php echo url_for('/community/forum/index.php'); ?>">Forum</a>
           </div>
         </li>
 
         <li class="nav-item contact-item">
-          <a class="nav-link nav-tabs contact-tab" href="<?php echo url_for("/contact/index.php"); ?>">Contact</a>
+          <a class="nav-link nav-tabs contact-tab" href="<?php echo url_for('/contact/index.php'); ?>">Contact</a>
         </li>
 
         <li class="nav-item nav-tabs go-pro-item">
-          <a class="nav-link go-pro-tab" href="<?php echo url_for("/go-pro/index.php"); ?>">Go Pro</a>
+          <a class="nav-link go-pro-tab" href="<?php echo url_for('/go-pro/index.php'); ?>">Go Pro</a>
         </li>
 
         
         <li class="nav-item dropdown courses-item">
           <a class="nav-link dropdown-toggle courses-tab nav-tabs" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
           <div class="dropdown-menu courses-dropdown">
-            <a class="dropdown-item" href="#!">HTML</a>
-            <a class="dropdown-item" href="#!">CSS</a>
-            <a class="dropdown-item" href="#!">JavaScript</a>
-            <a class="dropdown-item" href="#!">jQuery</a>
-            <a class="dropdown-item" href="#!">PHP</a>
-            <a class="dropdown-item" href="#!">See All</a>
+            <a class="dropdown-item" href="<?php echo url_for('/courses/html_courses/index.php'); ?>">HTML</a>
+            <a class="dropdown-item" href="<?php echo url_for('/courses/css_courses/index.php'); ?>">CSS</a>
+            <a class="dropdown-item" href="<?php echo url_for('/courses/javascript_courses/index.php'); ?>">JavaScript</a>
+            <a class="dropdown-item" href="<?php echo url_for('/courses/jquery_courses/index.php'); ?>">jQuery</a>
+            <a class="dropdown-item" href="<?php echo url_for('/courses/php_courses/index.php'); ?>">PHP</a>
+            <a class="dropdown-item" href="<?php echo url_for('/courses/index.php'); ?>">See All</a>
           </div>
         </li>
 
@@ -56,9 +57,10 @@
         <li class="nav-item dropdown paths-item">
           <a class="nav-link dropdown-toggle paths-tab nav-tabs" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Learning Paths</a>
           <div class="dropdown-menu paths-dropdown">
-            <a class="dropdown-item" href="#!">Front-end Development</a>
-            <a class="dropdown-item" href="#!">Back-end Development</a>
-            <a class="dropdown-item" href="#!">Full-stack Development</a>
+            <a class="dropdown-item" href="<?php echo url_for('/paths/front_end_dev/index.php'); ?>">Front-end Development</a>
+            <a class="dropdown-item" href="<?php echo url_for('/paths/back_end_dev/index.php'); ?>">Back-end Development</a>
+            <a class="dropdown-item" href="<?php echo url_for('/paths/full_stack_dev/index.php'); ?>">Full-stack Development</a>
+            <a class="dropdown-item" href="<?php echo url_for('/paths/index.php'); ?>">See All Learning Paths</a>
             <a class="dropdown-item disabled" href="#!">More Soon!</a>
           </div>
         </li>

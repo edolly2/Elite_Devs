@@ -28,28 +28,17 @@
   function validate_subject($subject) {
     $errors = [];
 
-    // menu_name
-    if(is_blank($subject['menu_name'])) {
+    if(is_blank($subject['name'])) {
       $errors[] = "Name cannot be blank.";
-    } elseif(!has_length($subject['menu_name'], ['min' => 2, 'max' => 255])) {
+    } elseif(!has_length($subject['name'], ['min' => 2, 'max' => 255])) {
       $errors[] = "Name must be between 2 and 255 characters.";
     }
 
-    // position
     // Make sure we are working with an integer
-    $postion_int = (int) $subject['position'];
-    if($postion_int <= 0) {
-      $errors[] = "Position must be greater than zero.";
-    }
-    if($postion_int > 999) {
-      $errors[] = "Position must be less than 999.";
-    }
-
-    // visible
-    // Make sure we are working with a string
-    $visible_str = (string) $subject['visible'];
-    if(!has_inclusion_of($visible_str, ["0","1"])) {
-      $errors[] = "Visible must be true or false.";
+    if(is_blank($subject['username'])) {
+      $errors[] = "Number cannot be blank.";
+    } elseif(!has_length($subject['username'], ['min' => 2, 'max' => 255])) {
+      $errors[] = "Name must be between 2 and 255 characters.";
     }
 
     return $errors;
@@ -64,11 +53,10 @@
     }
 
     $sql = "INSERT INTO subjects ";
-    $sql .= "(menu_name, position, visible) ";
+    $sql .= "(name, username) ";
     $sql .= "VALUES (";
-    $sql .= "'" . $subject['menu_name'] . "',";
-    $sql .= "'" . $subject['position'] . "',";
-    $sql .= "'" . $subject['visible'] . "'";
+    $sql .= "'" . $subject['name'] . "',";
+    $sql .= "'" . $subject['username'] . "',";
     $sql .= ")";
     $result = mysqli_query($db, $sql);
     // For INSERT statements, $result is true/false
@@ -91,9 +79,8 @@
     }
 
     $sql = "UPDATE subjects SET ";
-    $sql .= "menu_name='" . $subject['menu_name'] . "', ";
-    $sql .= "position='" . $subject['position'] . "', ";
-    $sql .= "visible='" . $subject['visible'] . "' ";
+    $sql .= "name='" . $subject['name'] . "', ";
+    $sql .= "username='" . $subject['username'] . "', ";
     $sql .= "WHERE id='" . $subject['id'] . "' ";
     $sql .= "LIMIT 1";
 
@@ -131,144 +118,144 @@
 
   // Pages
 
-  function find_all_pages() {
-    global $db;
+  // function find_all_pages() {
+  //   global $db;
 
-    $sql = "SELECT * FROM pages ";
-    $sql .= "ORDER BY subject_id ASC, position ASC";
-    $result = mysqli_query($db, $sql);
-    confirm_result_set($result);
-    return $result;
-  }
+  //   $sql = "SELECT * FROM pages ";
+  //   $sql .= "ORDER BY subject_id ASC, position ASC";
+  //   $result = mysqli_query($db, $sql);
+  //   confirm_result_set($result);
+  //   return $result;
+  // }
 
-  function find_page_by_id($id) {
-    global $db;
+  // function find_page_by_id($id) {
+  //   global $db;
 
-    $sql = "SELECT * FROM pages ";
-    $sql .= "WHERE id='" . $id . "'";
-    $result = mysqli_query($db, $sql);
-    confirm_result_set($result);
-    $page = mysqli_fetch_assoc($result);
-    mysqli_free_result($result);
-    return $page; // returns an assoc. array
-  }
+  //   $sql = "SELECT * FROM pages ";
+  //   $sql .= "WHERE id='" . $id . "'";
+  //   $result = mysqli_query($db, $sql);
+  //   confirm_result_set($result);
+  //   $page = mysqli_fetch_assoc($result);
+  //   mysqli_free_result($result);
+  //   return $page; // returns an assoc. array
+  // }
 
-  function validate_page($page) {
-    $errors = [];
+  // function validate_page($page) {
+  //   $errors = [];
 
-    // subject_id
-    if(is_blank($page['subject_id'])) {
-      $errors[] = "Subject cannot be blank.";
-    }
+  //   // subject_id
+  //   if(is_blank($page['subject_id'])) {
+  //     $errors[] = "Subject cannot be blank.";
+  //   }
 
-    // menu_name
-    if(is_blank($page['menu_name'])) {
-      $errors[] = "Name cannot be blank.";
-    } elseif(!has_length($page['menu_name'], ['min' => 2, 'max' => 255])) {
-      $errors[] = "Name must be between 2 and 255 characters.";
-    }
+  //   // menu_name
+  //   if(is_blank($page['menu_name'])) {
+  //     $errors[] = "Name cannot be blank.";
+  //   } elseif(!has_length($page['menu_name'], ['min' => 2, 'max' => 255])) {
+  //     $errors[] = "Name must be between 2 and 255 characters.";
+  //   }
 
     // position
     // Make sure we are working with an integer
-    $postion_int = (int) $page['position'];
-    if($postion_int <= 0) {
-      $errors[] = "Position must be greater than zero.";
-    }
-    if($postion_int > 999) {
-      $errors[] = "Position must be less than 999.";
-    }
+    // $postion_int = (int) $page['position'];
+    // if($postion_int <= 0) {
+    //   $errors[] = "Position must be greater than zero.";
+    // }
+    // if($postion_int > 999) {
+    //   $errors[] = "Position must be less than 999.";
+    // }
 
     // visible
     // Make sure we are working with a string
-    $visible_str = (string) $page['visible'];
-    if(!has_inclusion_of($visible_str, ["0","1"])) {
-      $errors[] = "Visible must be true or false.";
-    }
+    // $visible_str = (string) $page['visible'];
+    // if(!has_inclusion_of($visible_str, ["0","1"])) {
+    //   $errors[] = "Visible must be true or false.";
+    // }
 
     // content
-    if(is_blank($page['content'])) {
-      $errors[] = "Content cannot be blank.";
-    }
+    // if(is_blank($page['content'])) {
+    //   $errors[] = "Content cannot be blank.";
+    // }
 
-    return $errors;
-  }
+  //   return $errors;
+  // }
 
-  function insert_page($page) {
-    global $db;
+  // function insert_page($page) {
+  //   global $db;
 
-    $errors = validate_page($page);
-    if(!empty($errors)) {
-      return $errors;
-    }
+  //   $errors = validate_page($page);
+  //   if(!empty($errors)) {
+  //     return $errors;
+  //   }
 
-    $sql = "INSERT INTO pages ";
-    $sql .= "(subject_id, menu_name, position, visible, content) ";
-    $sql .= "VALUES (";
-    $sql .= "'" . $page['subject_id'] . "',";
-    $sql .= "'" . $page['menu_name'] . "',";
-    $sql .= "'" . $page['position'] . "',";
-    $sql .= "'" . $page['visible'] . "',";
-    $sql .= "'" . $page['content'] . "'";
-    $sql .= ")";
-    $result = mysqli_query($db, $sql);
+  //   $sql = "INSERT INTO pages ";
+  //   $sql .= "(subject_id, menu_name, position, visible, content) ";
+  //   $sql .= "VALUES (";
+  //   $sql .= "'" . $page['subject_id'] . "',";
+  //   $sql .= "'" . $page['menu_name'] . "',";
+  //   $sql .= "'" . $page['position'] . "',";
+  //   $sql .= "'" . $page['visible'] . "',";
+  //   $sql .= "'" . $page['content'] . "'";
+  //   $sql .= ")";
+  //   $result = mysqli_query($db, $sql);
     // For INSERT statements, $result is true/false
-    if($result) {
-      return true;
-    } else {
+    // if($result) {
+    //   return true;
+    // } else {
       // INSERT failed
-      echo mysqli_error($db);
-      db_disconnect($db);
-      exit;
-    }
-  }
+  //     echo mysqli_error($db);
+  //     db_disconnect($db);
+  //     exit;
+  //   }
+  // }
 
-  function update_page($page) {
-    global $db;
+  // function update_page($page) {
+  //   global $db;
 
-    $errors = validate_page($page);
-    if(!empty($errors)) {
-      return $errors;
-    }
+  //   $errors = validate_page($page);
+  //   if(!empty($errors)) {
+  //     return $errors;
+  //   }
 
-    $sql = "UPDATE pages SET ";
-    $sql .= "subject_id='" . $page['subject_id'] . "', ";
-    $sql .= "menu_name='" . $page['menu_name'] . "', ";
-    $sql .= "position='" . $page['position'] . "', ";
-    $sql .= "visible='" . $page['visible'] . "', ";
-    $sql .= "content='" . $page['content'] . "' ";
-    $sql .= "WHERE id='" . $page['id'] . "' ";
-    $sql .= "LIMIT 1";
+  //   $sql = "UPDATE pages SET ";
+  //   $sql .= "subject_id='" . $page['subject_id'] . "', ";
+  //   $sql .= "menu_name='" . $page['menu_name'] . "', ";
+  //   $sql .= "position='" . $page['position'] . "', ";
+  //   $sql .= "visible='" . $page['visible'] . "', ";
+  //   $sql .= "content='" . $page['content'] . "' ";
+  //   $sql .= "WHERE id='" . $page['id'] . "' ";
+  //   $sql .= "LIMIT 1";
 
-    $result = mysqli_query($db, $sql);
+  //   $result = mysqli_query($db, $sql);
     // For UPDATE statements, $result is true/false
-    if($result) {
-      return true;
-    } else {
-      // UPDATE failed
-      echo mysqli_error($db);
-      db_disconnect($db);
-      exit;
-    }
+  //   if($result) {
+  //     return true;
+  //   } else {
+  //     // UPDATE failed
+  //     echo mysqli_error($db);
+  //     db_disconnect($db);
+  //     exit;
+  //   }
 
-  }
+  // }
 
-  function delete_page($id) {
-    global $db;
+  // function delete_page($id) {
+  //   global $db;
 
-    $sql = "DELETE FROM pages ";
-    $sql .= "WHERE id='" . $id . "' ";
-    $sql .= "LIMIT 1";
-    $result = mysqli_query($db, $sql);
+  //   $sql = "DELETE FROM pages ";
+  //   $sql .= "WHERE id='" . $id . "' ";
+  //   $sql .= "LIMIT 1";
+  //   $result = mysqli_query($db, $sql);
 
     // For DELETE statements, $result is true/false
-    if($result) {
-      return true;
-    } else {
-      // DELETE failed
-      echo mysqli_error($db);
-      db_disconnect($db);
-      exit;
-    }
-  }
+  //   if($result) {
+  //     return true;
+  //   } else {
+  //     // DELETE failed
+  //     echo mysqli_error($db);
+  //     db_disconnect($db);
+  //     exit;
+  //   }
+  // }
 
 ?>

@@ -7,8 +7,9 @@
 
 html {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   font-size: 62.5%;
+  box-sizing: border-box;
   /* position: relative; */
 }
 
@@ -31,7 +32,7 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 img {
@@ -222,13 +223,15 @@ hr {
   padding: 0 1rem 0 17.5px;
 }
 
-.login-input {
+.login-input,
+.signup-input {
   width: 100%;
   border-radius: 0.6rem;
   padding: 3.75px 0 3.75px 7.5px;
 }
 
-.login-label {
+.login-label,
+.signup-label {
   font-size: 2.4rem;
 }
 
@@ -328,19 +331,20 @@ footer {
 }
 
 .main-title-cont h1 {
-  font-size: 6rem;
+  /* font-size: 6rem; */
 }
 
 main {
   /* position: relative; */
-  min-height: 100vh;
-  max-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
 }
 
 .home-main-cont {
+  display: flex;
   width: 90%;
+  padding: 2rem 0 4rem 0;
 }
 
 .card-title {
@@ -381,7 +385,103 @@ main {
   font-size: 1.6rem;
 }
 
-.signup-page-cont {
+.signup-page-cont,
+.helper-page-cont {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0 4rem 0;
+}
+
+.signup-form-cont {
+  width: 75%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form-cont p {
+  padding-top: 0;
+  /* font-size: 1.6rem; */
+}
+
+.signup-form {
+  width: 100%;
+}
+
+.signup-input {
+  width: 50%;
+}
+
+.signup-label {
+  white-space: nowrap;
+  font-size: 1.6rem;
+}
+
+legend {
+  white-space: nowrap;
+}
+
+.signup-hr {
+  margin: 0 12.5% 1rem 0;
+  width: 100%;
+}
+
+.card-numbers-cont {
+  display: flex;
+  padding-left: 10%;
+  /* justify-content: space-evenly; */
+}
+
+.signup-submit-btns-cont {
+  padding: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.submit-btns {
+  width: 25%;
+}
+
+.page-heading-cont {
+  /* padding: 2rem; */
+  width: 100%;
+  text-align: center;
+  font-size: 3.6rem;
+  padding: 2rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    max-width: 100%;
+  }
+}
+
+.helper-links-cont {
+  width: 75%;
+  height: 85%;
+  border: 2px solid black;
+  text-align: left;
+  padding: 2rem;
+}
+
+.helper-links-titles {
+  padding-left: 4rem;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.helper-links-titles:first-child {
+  border-top: none;
+}
+
+.helper-links-cont ul li {
+  list-style-type: disc;
+  margin-left: 2rem;
 }
