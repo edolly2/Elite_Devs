@@ -1,6 +1,6 @@
 <div class="home-resources-page-cont">
     <div class="page-heading-cont">
-        <h1>Helpful Resources</h1>
+        <h2 class="home-resources-heading">Helpful Resources</h2>
     </div>
     <div class="home-resources-cont">
 <ul class="lists">
