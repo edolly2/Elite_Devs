@@ -28,16 +28,16 @@
   function validate_subject($subject) {
     $errors = [];
 
-    if(is_blank($subject['name'])) {
+    if(is_blank($subject['signup-name'])) {
       $errors[] = "Name cannot be blank.";
-    } elseif(!has_length($subject['name'], ['min' => 2, 'max' => 255])) {
+    } elseif(!has_length($subject['signup-name'], ['min' => 2, 'max' => 255])) {
       $errors[] = "Name must be between 2 and 255 characters.";
     }
 
     // Make sure we are working with an integer
-    if(is_blank($subject['username'])) {
+    if(is_blank($subject['signup-username'])) {
       $errors[] = "Number cannot be blank.";
-    } elseif(!has_length($subject['username'], ['min' => 2, 'max' => 255])) {
+    } elseif(!has_length($subject['signup-username'], ['min' => 2, 'max' => 255])) {
       $errors[] = "Name must be between 2 and 255 characters.";
     }
 
@@ -53,10 +53,13 @@
     }
 
     $sql = "INSERT INTO subjects ";
-    $sql .= "(name, username) ";
+    $sql .= "(signup-name, signup-username, signup-email, signup-password, signup-retype-password) ";
     $sql .= "VALUES (";
-    $sql .= "'" . $subject['name'] . "',";
-    $sql .= "'" . $subject['username'] . "',";
+    $sql .= "'" . $subject['signup-name'] . "',";
+    $sql .= "'" . $subject['signup-username'] . "',";
+    $sql .= "'" . $subject['signup-email'] . "',";
+    $sql .= "'" . $subject['signup-password'] . "',";
+    $sql .= "'" . $subject['signup-retype-password'] . "'";
     $sql .= ")";
     $result = mysqli_query($db, $sql);
     // For INSERT statements, $result is true/false
@@ -79,8 +82,11 @@
     }
 
     $sql = "UPDATE subjects SET ";
-    $sql .= "name='" . $subject['name'] . "', ";
-    $sql .= "username='" . $subject['username'] . "', ";
+    $sql .= "signup-name='" . $subject['signup-name'] . "', ";
+    $sql .= "signup-username='" . $subject['signup-username'] . "', ";
+    $sql .= "signup-email='" . $subject['signup-email'] . "', ";
+    $sql .= "signup-password='" . $subject['signup-password'] . "', ";
+    $sql .= "signup-retype-password='" . $subject['signup-retype-password'] . "' ";
     $sql .= "WHERE id='" . $subject['id'] . "' ";
     $sql .= "LIMIT 1";
 

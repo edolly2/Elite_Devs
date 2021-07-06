@@ -121,3 +121,24 @@ $(document).ready(() => {
     window.location.replace("../index.php");
   })
 });
+
+const signUpForm = $(".signup-form");
+const accountTypeBtn = $(".account-type-btn");
+const personalInfoForm = $(".personal-info-cont");
+const paymentInfoForm = $(".payment-info-cont");
+$(document).ready(() => {
+  $(accountTypeBtn).on("click", (event) => {
+    if($(event.target).is("#signup-account-free-btn")) {
+      $(signUpForm).show(500);
+      $(personalInfoForm).show(500);
+    }
+    else if($(event.target).is("#signup-account-personal-btn")) {
+      $(signUpForm).show(500);
+      $(personalInfoForm).show(500);
+      $(paymentInfoForm).show(500);
+    }
+    else {
+      $(signUpForm).hide();
+    }
+  })
+});

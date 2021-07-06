@@ -49,7 +49,7 @@
             <a class="dropdown-item" href="<?php echo url_for('/courses/javascript_courses/index.php'); ?>">JavaScript</a>
             <a class="dropdown-item" href="<?php echo url_for('/courses/jquery_courses/index.php'); ?>">jQuery</a>
             <a class="dropdown-item" href="<?php echo url_for('/courses/php_courses/index.php'); ?>">PHP</a>
-            <a class="dropdown-item" href="<?php echo url_for('/courses/index.php'); ?>">See All</a>
+            <a class="dropdown-item" href="<?php echo url_for('/courses/index.php'); ?>">See All Course Topics</a>
           </div>
         </li>
 
@@ -69,7 +69,7 @@
 
       <form class="form-inline my-2 my-lg-0 search-bar">
         <input class="form-control mr-sm-2" type="text" placeholder="Search Courses" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        <button class="btn search-btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
       </form>
       <ul class="navbar-nav mr-auto">
       <a class="nav-link login-link" href="#">
