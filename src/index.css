@@ -9,5 +9,18 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace;  
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  }    
+
+ul, li {
+list-style: none;
+padding: 0;
+margin: 0;
 }

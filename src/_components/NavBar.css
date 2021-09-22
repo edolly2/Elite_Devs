@@ -1,0 +1,13 @@
+.navBarCont {
+    width: 100%;
+}
+
+.navBarCont nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navBarCont ul {
+    display: flex;
+    gap: 16px;
+}
