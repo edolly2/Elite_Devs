@@ -1,4 +1,11 @@
 .headerCont {
     width: 100%;
-    padding: 16px;
+}
+
+.headerCont header {
+    display: flex;
+}
+
+.hidden {
+    display: none;
 }

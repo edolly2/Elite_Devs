@@ -1,0 +1,50 @@
+.navBarCont {
+    width: 100%;
+    display: flex;
+    max-height: 17vh;
+}
+
+.navBarCont nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4rem;
+    align-items: center;
+    background-color: green;
+    width: 100%;
+    align-items: flex-end;
+    padding: 1.6rem;
+
+}
+
+.navBarCont ul {
+    display: flex;
+    /* gap: 3.2rem; */
+}
+.navBar-ul-1{
+font-size: 1.6rem;
+gap: 3.2rem;
+margin-bottom: 0.6rem;
+
+}
+
+.navBar-ul-2 {
+    /* margin-left: auto; */
+    gap: 1.6rem;
+}
+
+
+.site-brand {
+    width: 5rem;
+    height: auto;
+}
+
+.profile-icon {
+    max-width: 4rem;
+    height: 4rem;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.icon {
+    font-size: 4rem;
+}

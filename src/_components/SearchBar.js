@@ -5,8 +5,8 @@ import { AiOutlineSearch } from 'react-icons/ai'
 function SearchBar() {
   return (
     <div className="searchBarCont">
-      <input type="text" placeholder="Search.." />
-        <AiOutlineSearch/>
+      <input className="searchBarInput" type="text" placeholder="Search.." />
+        <AiOutlineSearch className="search-icon"/>
     </div>
   );
 }

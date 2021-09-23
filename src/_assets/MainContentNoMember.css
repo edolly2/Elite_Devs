@@ -1,0 +1,8 @@
+.mainContentNoMemberCont {
+    background-image: url('../_assets/sd-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 83vh;
+    max-height: 83vh;
+}
