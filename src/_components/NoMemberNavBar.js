@@ -1,39 +1,35 @@
-import React from 'react';
-import './NoMemberNavBar.css';
-import "./MemberNavBar.css";
-import { IoMdNotifications } from "react-icons/io";
-import { CgMenuGridR, CgNotes } from "react-icons/cg";
-import SearchBar from "./SearchBar";
-import Logo from '../_assets/ed-logo.svg';
-import Avatar from '../_assets/stock-avatar.png';
+import React from "react";
+import "./NoMemberNavBar.css";
+import Logo from "../_assets/edlogo.svg";
+import BTN from "./BTN";
 
 function NoMemberNavBar() {
-    return (
-        <div className='navBarCont'>
-        <nav>
-            <img className="site-brand" src={Logo} alt="" />
+  return (
+    <div className="navBarCont">
+      <nav>
+        <div className="wrapper">
+          <img className="site-brand" src={Logo} alt="" />
           <ul className="navBar-ul-1">
-            <li>home</li>
-            <li>browse</li>
-            <li>Catalogue</li>
-            <li>Enterprise</li>
-            <li>individuals
-            </li>
-            <li>resources</li>
+            <li>HOME</li>
+            <li>BROWSE</li>
+            <li>CATALOGUE</li>
+            <li>ENTERPRISE</li>
+            <li>INDIVIDUALS</li>
+            <li>RESOURCES</li>
           </ul>
-          <SearchBar />
-          <ul className="navBar-ul-2">
-            <li>
-              <button>Login</button>
-            </li>
-            <li>
-              <button>Try Free</button>
-            </li>
-            
-          </ul>
-        </nav>
-      </div>
-    )
+        </div>
+        {/* <SearchBar /> */}
+        <ul className="navBar-ul-2">
+          <li>
+            <BTN btnContainer="btnCont" btnClass="btn" btnText="Login" />
+          </li>
+          <li>
+            <BTN btnContainer="btnCont" btnClass="btn" btnText="Try Free" />
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 }
 
 export default NoMemberNavBar;

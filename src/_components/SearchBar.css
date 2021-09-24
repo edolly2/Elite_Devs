@@ -1,38 +1,50 @@
 /* Add a black background color to the top navigation bar */
 
-input:focus { 
-outline: none;
+input:focus {
+  outline: none;
 }
+
 .searchBarCont {
-    overflow: hidden;
+  overflow: hidden;
     display: flex;
     align-items: center;
     width: 25%;
     position: relative;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+    /* border-radius: 0.6rem; */
 
-  }
+}
 
-  .searchBarInput {
-    width: 100%;
+.searchBarInput {
+  width: 100%;
     font-size: 1.6rem;
     padding: 0.6rem;
-    margin-bottom: 0.6rem;
-    border-radius: 0.6rem;
-    border-right-style: none;
-  }
+    /* margin-bottom: 0.6rem; */
+    /* border-radius: 0.6rem; */
+    /* border-right-style: none; */
+    border-style: none;
+    outline: 2px solid black;
+    min-height: 100%;
+  /* width: 100%;
   
-  /* Style the search box inside the navigation bar */
-  .searchBarCont input[type=text] {
-    /* float: right; */
-    /* padding: 6px; */
-    /* border: none; */
-    /* margin-top: 8px; */
-    /* margin-right: 16px; */
-    /* font-size: 17px; */
-  }
-  
-  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-  /* @media screen and (max-width: 600px) {
+  padding: 15px;
+  margin: 4px;
+  box-sizing: border-box;
+  padding-left: 60px; */
+}
+
+/* Style the search box inside the navigation bar */
+.searchBarCont input[type="text"] {
+  /* float: right; */
+  /* padding: 6px; */
+  /* border: none; */
+  /* margin-top: 8px; */
+  /* margin-right: 16px; */
+  /* font-size: 17px; */
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+/* @media screen and (max-width: 600px) {
     .searchBarCont a, .searchBarCont input[type=text] {
       float: none;
       display: block;
@@ -46,18 +58,24 @@ outline: none;
     }
   } */
 
-  .search-icon {
-    /* font-size: 1.6rem; */
-    background-color: blue;
-    border-top-right-radius: 0.6rem;
-    border-bottom-right-radius: 0.6rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 10%;
-    height: auto;
-    /* box-sizing:; */
-    border: 2px solid black;
+.search-icon {
+  font-size: 1.6rem;
+  background-color: blue;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 10%;
+  height: 100%;
+  /* border: 1px solid black; */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 
-
-  }
+  /* position: absolute;
+  margin-left: 4px;
+  top: 4px;
+  padding: 17px 15px;
+  color: #30a3f1;
+  background: black; */
+}

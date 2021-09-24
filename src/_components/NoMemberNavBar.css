@@ -1,0 +1,56 @@
+.navBarCont {
+    width: 100%;
+    display: flex;
+    max-height: 17vh;
+}
+
+.navBarCont nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+    min-height: 15vh;
+    align-items: flex-end;
+    padding: 1.6rem;
+
+}
+
+.navBarCont ul {
+    display: flex;
+    /* gap: 3.2rem; */
+}
+
+.navBarCont li {
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+}
+
+.navBarCont li:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--clr-dp);
+    text-decoration-thickness: 5px;
+    transform: scale(1.1, 1.1);
+}
+
+.navBar-ul-1{
+font-size: 1.6rem;
+gap: 3.2rem;
+margin-bottom: 0.6rem;
+
+}
+
+.navBar-ul-2 {
+    /* margin-left: auto; */
+    gap: 1.6rem;
+}
+
+
+.site-brand {
+    width: 7rem;
+    height: auto;
+}
+
+.icon {
+    font-size: 4rem;
+}
