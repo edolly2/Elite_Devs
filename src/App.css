@@ -1,11 +1,27 @@
-.icon, .profile-icon, .search-icon, ul, li, .site-brand {
-    cursor: pointer;
+.App {
+  text-align: center;
+}
+
+.icon,
+.profile-icon,
+.search-icon,
+ul,
+li,
+.site-brand {
+  cursor: pointer;
 }
 
 .headerWrapper {
-    width: 100%;
-    height: 100%;
-    padding: 0 0 2px 0;
-    border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 2px 0;
+  border-image: linear-gradient(45deg, rgb(0, 143, 104), rgb(250, 224, 66)) 1;
+  position: relative;
 }
+
+/* .modalOverlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+} */

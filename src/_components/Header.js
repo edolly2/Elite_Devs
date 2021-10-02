@@ -20,7 +20,7 @@ function Header(props) {
     <div className="headerCont">
       <header>
         <MemberNavBar />
-        <NoMemberNavBar />
+        <NoMemberNavBar loginHandler={props.loginHandler} />
       </header>
     </div>
   );
