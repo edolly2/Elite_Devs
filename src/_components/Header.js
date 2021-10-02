@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import "./Header.css";
 import MemberNavBar from "./MemberNavBar";
 import NoMemberNavBar from "./NoMemberNavBar";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  useHistory,
+} from "react-router-dom";
 
 function Header(props) {
   const [memberNavBar, setMemberNavBar] = useState(false);
@@ -20,7 +26,7 @@ function Header(props) {
     <div className="headerCont">
       <header>
         <MemberNavBar />
-        <NoMemberNavBar loginHandler={props.loginHandler} />
+        <NoMemberNavBar />
       </header>
     </div>
   );

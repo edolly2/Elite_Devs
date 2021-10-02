@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -7,9 +7,46 @@ import {
 } from "react-router-dom";
 import "./NoMemberNavBar.css";
 import Logo from "../_assets/edlogo.svg";
-import BTN from "./BTN";
+import styled from "styled-components";
+import { AccountBox } from "./_accountBox";
+
+const Btn = styled.button`
+  min-width: 10rem;
+  padding: 0.4rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: 2px solid var(--clr-dp);
+  background-color: transparent;
+  color: white;
+  &:hover {
+    border: 2px solid var(--clr-dp);
+    background-color: var(--clr-dp);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+  }
+`;
+
+const LoginContainer = styled.div`
+  // width: 100%;
+  // height: 100%;
+  // display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 19px;
+  // display: none;
+  // background-color: black;
+  // z-index: 10;
+`;
 
 function NoMemberNavBar(props) {
+  const [modalActive, setModalActive] = useState(false);
+
   return (
     <div className="navBarCont">
       <nav>
@@ -39,24 +76,37 @@ function NoMemberNavBar(props) {
         {/* <SearchBar /> */}
         <ul className="navBar-ul-2">
           <li>
-            <BTN
-              onClick={props.loginHandler}
-              btnContainer="btnCont"
-              btnClass="btn"
-              btnText="Login"
-            />
+            <Btn
+              onClick={(e) => {
+                setModalActive(true);
+                console.log(modalActive);
+              }}
+            >
+              Login
+            </Btn>
           </li>
           <li>
             <Link to="/sign-up">
-              <BTN
+              {/* <BTN
                 btnContainer="btnCont"
                 btnClass="btn"
                 btnText="Try Free"
-              ></BTN>
+              ></BTN> */}
             </Link>
           </li>
         </ul>
       </nav>
+      <LoginContainer>
+        <div
+          style={
+            modalActive
+              ? { display: "flex" }
+              : { display: "none", zIndex: "10" }
+          }
+        >
+          <AccountBox />
+        </div>
+      </LoginContainer>
     </div>
   );
 }

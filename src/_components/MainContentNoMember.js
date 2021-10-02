@@ -1,6 +1,5 @@
 import React from "react";
 import "./MainContentNoMember.css";
-import BTN from "./BTN";
 
 function MainContentNoMember() {
   return (
@@ -19,8 +18,10 @@ function MainContentNoMember() {
             </ul>
           </div>
           <div className="mainBoxRight">
-            <h3>Get Your <span className="pink">7-Day</span> Free Trial!</h3>
-          <BTN btnContainer="btnCont" btnClass="btn" btnText="Try Free" />
+            <h3>
+              Get Your <span className="pink">7-Day</span> Free Trial!
+            </h3>
+            {/* <BTN btnContainer="btnCont" btnClass="btn" btnText="Try Free" /> */}
           </div>
         </div>
       </main>

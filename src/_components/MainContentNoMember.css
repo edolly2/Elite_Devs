@@ -10,7 +10,7 @@
 }
 
 .punchline {
-    margin-bottom: 3.2rem;
+  margin-bottom: 3.2rem;
 }
 
 main {
@@ -29,6 +29,7 @@ main {
   box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.2);
   min-height: 50vh;
   padding: 3.2rem;
+  position: relative;
 }
 
 /* main::before {
@@ -54,7 +55,7 @@ main h3 {
 }
 
 main h1 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 main ul {
@@ -67,26 +68,25 @@ main li {
 }
 
 .mainBoxCont {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .mainBoxLeft {
-    border-right: 2px solid white;
+  border-right: 2px solid white;
 }
 
 .mainBoxRight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .mainBoxRight h3 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 10%;
-    margin-top: 0.8rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 10%;
+  margin-top: 0.8rem;
 }
-
